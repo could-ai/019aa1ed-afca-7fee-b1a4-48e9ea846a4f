@@ -16,14 +16,18 @@ class MMEApp extends StatelessWidget {
       title: 'MME',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        // Changed to Green for "Cash Money" theme
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green, brightness: Brightness.light),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           elevation: 0,
         ),
+        cardTheme: CardTheme(
+          elevation: 2,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        ),
       ),
-      // Define the initial route and the routes table
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
